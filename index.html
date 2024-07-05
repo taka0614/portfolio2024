@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/141552/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/CopyShader.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/141552/03_glitch.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/EffectComposer.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/RenderPass.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/ShaderPass.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/MaskPass.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/141552/08_texturepass.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/GlitchPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div id="initial-loader" class="padded"><span id="loader-text"></span></div>
+    <div id="main-body">
+        <section id="page-structure" class="ajax">
+            <header class="eliza height-95 black back-block-green-bottom-right">
+                
+                <div class="header-text grid_row padded-horizontal">
+                    <h2 class="grid2">Revolutionary is our baseline. Different is our first step.<br>we’re just getting started.</h2>
+                    <h1 class="grid3">Portfolio...</h1>
+                </div>
+                
+                <div id="canvas">
+                    <img id="image" src="img/main.jpg" data-fallback="higashi_sapporo">
+                </div>
+            </header>
+        </section>
+    </div>
+    <h3 id="count"></h3>
+
+    <section id="fly-text">
+        <div class="video-wrap">
+            <video src="backimage.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div id="fly-in">  
+            <div>SKILLS<span>TAKAHIRO UEDA</span></div>
+            <div>HTML&CSS<span>WEB</span></div>
+            <div>j-Query<span>WEB</span></div>
+            <div>Java Script<span>WEB</span></div>
+            <div>Photoshop<span>Adobe</span></div>
+            <div>Illustrator<span>Adobe</span></div>
+            <div>XD<span>Adobe</span></div>
+            <div>Premiere Pro<span>Adobe</span></div>
+        </div>
+    </section>
+
+    <article>
+        <section id="container">
+            <figure class="snip hover">
+                <img src="img/ulead.jpg" alt="ulead"/>
+                <figcaption>
+                  <h3>ulead</h3>
+                  <p>This is the homepage of a type A business that supports continued employment created using WordPress. We are implementing animations in canvas and progress bars in svg.</p>
+                  <h4>Web Site</h4>
+                </figcaption>
+                <a href="https://ulead-sapporo.com/" target="_blank"></a>
+            </figure>
+
+            <figure class="snip hover">
+                <img src="img/thesalon.jpg" alt="theSalon"/>
+                <figcaption>
+                  <h3>the Salon</h3>
+                  <p>This is the website of theSalon, a beauty salon located in Chuo Ward, Sapporo City. We have implemented a gallery and reviews.</p>
+                  <h4>Web Site</h4>
+                </figcaption>
+                <a href="https://takumi-honma.com/" target="_blank"></a>
+            </figure>
+
+            <figure class="snip hover">
+                <img src="img/hiochi.jpg" alt="hiochi"/>
+                <figcaption>
+                  <h3>HIWAOCHITE SAKETANOSHI</h3>
+                  <p>This is the homepage and EC site of an izakaya located in Musashino, Tokyo, operated by Realize Co., Ltd.</p>
+                  <h4>EC Site</h4>
+                </figcaption>
+                <a href="https://hiochi.shop/" target="_blank"></a>
+            </figure>
+
+            <figure class="snip hover">
+                <img src="img/bom.jpg" alt="BEST of MISS"/>
+                <figcaption>
+                  <h3>BEST OF MISS</h3>
+                  <p>This is the BEST OF MISS HOKKAIDO 2022 pamphlet.</p>
+                  <h4>DTP pamphlet</h4>
+                </figcaption>
+                <a href="pdf/bom_pamphlet.pdf" target="_blank"></a>
+            </figure>
+
+            <figure class="snip hover">
+                <img src="img/sasuke.jpg" alt="sasuke"/>
+                <figcaption>
+                  <h3>SASUKE HOLDINGS</h3>
+                  <p>This is the business card of SASUKE HOLDINGS Co., Ltd.</p>
+                  <h4>DTP business card</h4>
+                </figcaption>
+                <a href="pdf/sasuke_business_card.pdf" target="_blank"></a>
+            </figure>
+
+            <figure class="snip hover">
+                <img src="img/blairflower.jpg" alt="blairflower"/>
+                <figcaption>
+                  <h3>Blair Flower</h3>
+                  <p>This is a poster for Blair Flower.</p>
+                  <h4>DTP poster</h4>
+                </figcaption>
+                <a href="pdf/blairflower_poster.pdf" target="_blank"></a>
+            </figure>
+
+            <figure class="snip hover">
+                <img src="img/partir_vr.jpg" alt="Partir_vr"/>
+                <figcaption>
+                  <h3>Partir</h3>
+                  <p>This is an in-store VR of the beauty salon Partir in Chuo-ku, Sapporo.</p>
+                  <h4>VR</h4>
+                </figcaption>
+                <a href="https://favorscreation.work/vr/partir1/" target="_blank"></a>
+            </figure>
+
+            <figure class="snip hover">
+                <img src="img/vertclair.jpg" alt="vertclair"/>
+                <figcaption>
+                  <h3>Vert clair</h3>
+                  <p>directed the poster for Vertclair, a bakery in Sapporo.</p>
+                  <h4>DTP direction poster</h4>
+                </figcaption>
+                <a href="pdf/vertclair_poster.pdf" target="_blank"></a>
+            </figure>
+
+            <figure class="snip hover">
+                <img src="img/partir.jpg" alt="Partir"/>
+                <figcaption>
+                  <h3>Partir</h3>
+                  <p>directed the leaflet for Partir, the beauty salon in Sapporo.</p>
+                  <h4>DTP direction poster</h4>
+                </figcaption>
+                <a href="pdf/partir_leaflet.pdf" target="_blank"></a>
+            </figure>
+
+            <figure class="snip hover">
+                <img src="img/sapporo_memorial.jpg" alt="sapporo_memorial"/>
+                <figcaption>
+                  <h3>Sapporo Memorial Hospital</h3>
+                  <p>This is the direction of the video for Sapporo Memorial Hospital.</p>
+                  <h4>DTP direction movie</h4>
+                </figcaption>
+                <a href="https://youtu.be/om2UoTwFq5I" target="_blank"></a>
+            </figure>
+
+        </section>
+    </article>
+    
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                var scroll = $(this).scrollTop();
+                var count = document.getElementById("count");
+                count.innerHTML = scroll;
+            });
+        });
+
+        $(".hover").mouseleave(
+            function () {
+                $(this).removeClass("hover");
+            }
+        );
+    </script>
+</body>
+
+</html>
